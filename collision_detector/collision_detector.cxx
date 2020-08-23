@@ -15,13 +15,13 @@ int sat_collision_detector_2d::check_collision(figure& in_figure_one,
     build_normals(in_figure_two, normals_of_figure_two);
 
     // Step 2
-    // make projections of all figuirs onto the normals of figuir_one
+    // make projections of all figures onto the normals of figure_one
     // and check the gap...
 
     if (!check_coll(in_figure_one, in_figure_two, normals_of_figure_one))
         return 0;
 
-    // ...if there is no gap, repeat Step 2  for normals of figuir_two
+    // ...if there is no gap, repeat Step 2  for normals of figure_two
     if (!check_coll(in_figure_one, in_figure_two, normals_of_figure_two))
         return 0;
 
