@@ -32,7 +32,7 @@ public:
         vertices.emplace_back(point(x, y));
     }
 
-    inline std::vector<point>& get_vertices() { return vertices; }
+    inline const std::vector<point>& get_vertices() const { return vertices; }
     inline size_t get_number_of_vertex() const { return vertices.size(); }
 
 private:

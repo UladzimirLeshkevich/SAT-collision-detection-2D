@@ -34,7 +34,6 @@ void sat_collision_detector_2d::build_normals(figure&          in_figure,
     fiugur_sections edges = convert_vertices_to_edges(in_figure.get_vertices());
 
     for (const auto& it : edges)
-    // for (const auto& it : in_figure.get_edges())
     {
         point tmp_result_a;
         point tmp_result_b;
