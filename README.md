@@ -3,15 +3,10 @@
 
 Test cases description in the "test cases.pdf"
 
-Building and run on Windows10 from GitBash by Ninja:  
+Tested on Windows10 and Fedora, building and running with Ninja:  
   
   $ git clone https://github.com/UladzimirLeshkevich/SAT-collision-detection-2D.git  
   $ cd SAT-collision-detection-2D  
   $ cmake -GNinja  
   $ ninja  
-  $ ../build/game_client.exe  
-
-
-  
- 
-  
+  $ ../build/game_client
