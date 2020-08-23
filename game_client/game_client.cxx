@@ -1,5 +1,3 @@
-#include "game_client.hxx"
-
 #include "../collision_detector/collision_detector.hxx"
 #include "../figure/figure.hxx"
 

@@ -21,6 +21,23 @@ private:
     points figure_one_projection;
     points figure_two_projection;
 
+    fiugur_sections convert_vertices_to_edges(const points& vertices)
+    {
+        fiugur_sections edges;
+        size_t          last_vertex_index = vertices.size() - 1;
+        for (size_t i = 0; i < last_vertex_index; ++i)
+        {
+            edges.emplace_back(
+                std::make_pair(point(vertices[i].x, vertices[i].y),
+                               point(vertices[i + 1].x, vertices[i + 1].y)));
+        }
+        edges.emplace_back(std::make_pair(
+            point(vertices[last_vertex_index].x, vertices[last_vertex_index].y),
+            point(vertices[0].x, vertices[0].y)));
+
+        return edges;
+    }
+
     void build_normals(figure& in_figure, fiugur_sections& save_to);
 
     void project_figure_to_normal(figure& in_figure, const section& in_normal,
