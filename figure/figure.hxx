@@ -1,4 +1,8 @@
 #pragma once
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <string>
 #include <vector>
 
 struct point
@@ -27,14 +31,18 @@ bool operator<(point a, point b)
 class figure
 {
 public:
-    inline void add_vertex(const float x, const float y)
-    {
-        vertices.emplace_back(point(x, y));
-    }
+    void add_vertex(const float x, const float y);
 
     inline const std::vector<point>& get_vertices() const { return vertices; }
+
     inline size_t get_number_of_vertex() const { return vertices.size(); }
+
+    bool read_geometry_from_file(const std::string& in_file);
+
+    void print_vertices() const;
 
 private:
     std::vector<point> vertices;
+
+    void parsing_and_save_coordinates(const std::string& str);
 };

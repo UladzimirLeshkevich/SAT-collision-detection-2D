@@ -7,4 +7,6 @@ add_executable(	${PROJECT_NAME} game_client.cxx )
 
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_14)
 
-target_link_libraries( ${PROJECT_NAME} 	collision_detector )
+target_link_libraries( ${PROJECT_NAME} 	collision_detector 
+										figure
+										)
