@@ -5,7 +5,7 @@ Test cases description in the "test cases.pdf"
 
 Building and run on Windows10 by Ningja:
   cmake -GNinja
-  ningja
+  ninja
   cd ..\build\
   game_client.exe
   
