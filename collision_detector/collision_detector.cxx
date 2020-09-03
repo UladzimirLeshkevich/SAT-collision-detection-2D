@@ -10,18 +10,16 @@ int sat_collision_detector_2d::check_collision(figure& in_figure_one,
     }
 
     // Step 1
-    // build normals to all edges of the figures
-    build_normals(in_figure_one, normals_of_figure_one);
-    build_normals(in_figure_two, normals_of_figure_two);
-
-    // Step 2
+    // build normals to all edges of the figure_one
     // make projections of all figures onto the normals of figure_one
     // and check the gap...
-
+    build_normals(in_figure_one, normals_of_figure_one);
     if (!check_coll(in_figure_one, in_figure_two, normals_of_figure_one))
         return 0;
 
-    // ...if there is no gap, repeat Step 2  for normals of figure_two
+    
+    // ...if there is no gap, repeat Step 1 for normals of figure_two
+    build_normals(in_figure_two, normals_of_figure_two);
     if (!check_coll(in_figure_one, in_figure_two, normals_of_figure_two))
         return 0;
 

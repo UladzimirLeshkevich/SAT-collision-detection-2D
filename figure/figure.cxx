@@ -2,7 +2,7 @@
 
 void figure::add_vertex(const float x, const float y)
 {
-    vertices.emplace_back(point(x, y));
+    vertices.emplace_back(x, y);
 }
 
 bool figure::read_geometry_from_file(const std::string& in_file)

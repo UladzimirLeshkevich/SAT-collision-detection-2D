@@ -28,12 +28,12 @@ private:
         for (size_t i = 0; i < last_vertex_index; ++i)
         {
             edges.emplace_back(
-                std::make_pair(point(vertices[i].x, vertices[i].y),
-                               point(vertices[i + 1].x, vertices[i + 1].y)));
+                point(vertices[i].x, vertices[i].y),
+                               point(vertices[i + 1].x, vertices[i + 1].y));
         }
-        edges.emplace_back(std::make_pair(
+        edges.emplace_back(
             point(vertices[last_vertex_index].x, vertices[last_vertex_index].y),
-            point(vertices[0].x, vertices[0].y)));
+            point(vertices[0].x, vertices[0].y));
 
         return edges;
     }
